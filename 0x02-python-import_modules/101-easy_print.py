@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import easypeasy
+__import__('os').system("echo \#pythoniscool")
