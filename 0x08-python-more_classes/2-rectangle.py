@@ -1,11 +1,6 @@
 #!/usr/bin/python3
 """ class Rectangle """
 
-#!/usr/bin/python3
-"""
- class Rectangle that defines a rectangle by: (based on 1-rectangle.py)
-"""
-
 
 class Rectangle:
     """constructor"""
