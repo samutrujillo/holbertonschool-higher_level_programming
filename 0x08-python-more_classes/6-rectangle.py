@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""class Rectangle"""
+""" class Rectangle """
 
 
 class Rectangle:
-    """cosntructor"""
+    """ cosntructor """
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
