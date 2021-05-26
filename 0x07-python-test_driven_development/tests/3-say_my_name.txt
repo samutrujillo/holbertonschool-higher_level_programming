@@ -1,0 +1,49 @@
+================================================================================
+test for my program
+================================================================================
+this program Write a function that prints
+(My name is <first name> <last name>)
+Here we show the possible cases
+================================================================================
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Correct Usage:
+>>> say_my_name("John", "Smith")
+My name is John Smith
+
+>>> say_my_name("Walter", "White")
+My name is Walter White
+
+>>> say_my_name("Samuel", "Trujillo")
+My name is Samuel Trujillo
+
+>>> say_my_name("hello", "World")
+My name is hello World
+
+>>> say_my_name("aaa", "bbb")
+My name is aaa bbb
+
+>>> say_my_name("python", "cool")
+My name is python cool
+
+On Errors:
+
+>>> say_my_name(2, 2)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+>>> say_my_name("como", 2)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name("ir", 2)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+>>> say_my_name(3, "new")
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string

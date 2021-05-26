@@ -1,0 +1,48 @@
+================================================================================
+test for my program
+================================================================================
+this program sum the variables a and b and return the value cast of a and b
+in an integer
+Here we show the possible cases
+================================================================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+ Correct Usage:
+
+ >>> print(add_integer(1, 2))
+ 3
+ >>> print(add_integer(100, -2))
+ 98
+ >>> print(add_integer(2))
+ 100
+ >>> print(add_integer(100.3, -2))
+ 98
+ >>> print(add_integer(10, -2))
+ 8
+ >>> print(add_integer(100.3))
+ 198
+ >>> print(add_integer(-100.3))
+ -2
+ >>> print(add_integer(33))
+ 131
+
+ On Errors:
+ >>> print(add_integer("hola"))
+ Traceback (most recent call last):
+  ...
+ TypeError: a must be an integer
+
+ >>> print(add_integer(3, "como"))
+ Traceback (most recent call last):
+  ...
+ TypeError: b must be an integer
+
+ >>> print(add_integer("hello", "world"))
+ Traceback (most recent call last):
+  ...
+ TypeError: a must be an integer
+
+ >>> print(add_integer())
+ Traceback (most recent call last):
+  ...
+ TypeError: add_integer() missing 1 required positional argument: 'a'
