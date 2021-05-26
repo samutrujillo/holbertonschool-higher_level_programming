@@ -1,13 +1,11 @@
-================================================================================
-test for my program
-================================================================================
-this program Write a function that prints a text with 2 new lines
-after each of these characters: ((.) (?) and (:))
-Here we show the possible cases
-================================================================================
->>> text_indentation = __import__("5-text_indentation").text_indentation
+# ===============================================
+# Unit test 5-text_indentation
+# ===============================================
 
-Correct Usage:
+
+import module:
+       >>> text_indentation = __import__("5-text_indentation").text_indentation
+
 Lorem ipsum:
        >>> text_indentation("Lorem ipsum dolor? sit amet, consectetur. adipiscing elit")
        Lorem ipsum dolor?
@@ -20,22 +18,17 @@ Only Separtator without:
        >>> text_indentation("?")
        ?
 
-On Errors:
-
-Integer as argument:
->>> text_indentation(7)
-Traceback (most recent call last):
-...
-TypeError: text must be a string
+No argument:
+       >>> text_indentation()
+       Traceback (most recent call last):
+       TypeError: text_indentation() missing 1 required positional argument: 'text'
 
 Two texts:
->>> text_indentation("test1?", "test2:")
-Traceback (most recent call last):
-...
-TypeError: text_indentation() takes 1 positional argument but 2 were given
+       >>> text_indentation("test1?", "test2:")
+       Traceback (most recent call last):
+       TypeError: text_indentation() takes 1 positional argument but 2 were given
 
-No argument:
->>> text_indentation()
-Traceback (most recent call last):
-...
-TypeError: text_indentation() missing 1 required positional argument: 'text'
+Integer as argument:
+       >>> text_indentation(7)
+       Traceback (most recent call last):
+       TypeError: text must be a string
