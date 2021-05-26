@@ -3,16 +3,12 @@
 
 
 def add_integer(a, b=98):
-    """finction"""
+    """method that return a + b"""
     try:
-        if type(a) is float:
-            a = int(a)
-        if type(b) is float:
-            b = int(b)
-        if type(a) is not int:
+        if isinstance(a, (float, int)) is False:
             raise TypeError("a must be an integer")
-        if type(b) is not int:
+        if isinstance(b, (float, int))is False:
             raise TypeError("b must be an integer")
-        return a + b
+        return(int(a) + int(b))
     except:
         raise
