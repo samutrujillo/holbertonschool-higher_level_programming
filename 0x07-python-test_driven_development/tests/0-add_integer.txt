@@ -1,48 +1,53 @@
-================================================================================
-test for my program
-================================================================================
-this program sum the variables a and b and return the value cast of a and b
-in an integer
-Here we show the possible cases
-================================================================================
->>> add_integer = __import__('0-add_integer').add_integer
+# ===============================================
+# Unit test 0-add_integer
+# ===============================================
 
- Correct Usage:
 
- >>> print(add_integer(1, 2))
- 3
- >>> print(add_integer(100, -2))
- 98
- >>> print(add_integer(2))
- 100
- >>> print(add_integer(100.3, -2))
- 98
- >>> print(add_integer(10, -2))
- 8
- >>> print(add_integer(100.3))
- 198
- >>> print(add_integer(-100.3))
- -2
- >>> print(add_integer(33))
- 131
+import module:
+       >>> add_integer = __import__("0-add_integer").add_integer
 
- On Errors:
- >>> print(add_integer("hola"))
- Traceback (most recent call last):
-  ...
- TypeError: a must be an integer
+Add two integer:
+       >>> add_integer(7, 7)
+       14
 
- >>> print(add_integer(3, "como"))
- Traceback (most recent call last):
-  ...
- TypeError: b must be an integer
+Add two floats:
+       >>> add_integer(7)
+       105
 
- >>> print(add_integer("hello", "world"))
- Traceback (most recent call last):
-  ...
- TypeError: a must be an integer
+Add two floats:
+       >>> add_integer(7.0, 7.0)
+       14
 
- >>> print(add_integer())
- Traceback (most recent call last):
-  ...
- TypeError: add_integer() missing 1 required positional argument: 'a'
+Add float with integer:
+       >>> add_integer(7.0, 7)
+       14
+
+Add strings:
+       >>> add_integer("te", "st")
+       Traceback (most recent call last):
+       TypeError: a must be an integer
+
+Add b as string:
+       >>> add_integer(7, "test")
+       Traceback (most recent call last):
+       TypeError: b must be an integer
+
+Add None:
+       >>> add_integer()
+       Traceback (most recent call last):
+       TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Add three numbers:
+       >>> add_integer(7, 7, 7)
+       Traceback (most recent call last):
+       TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+Float overflow:
+       >>> add_integer(float('inf'), 7)
+       Traceback (most recent call last):
+       OverflowError: cannot convert float infinity to integer
+
+NaN float:
+       >>> add_integer(float('NaN'), 7)
+       Traceback (most recent call last):
+       ValueError: cannot convert float NaN to integer
