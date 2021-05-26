@@ -1,49 +1,30 @@
-================================================================================
-test for my program
-================================================================================
-this program Write a function that prints
-(My name is <first name> <last name>)
-Here we show the possible cases
-================================================================================
->>> say_my_name = __import__('3-say_my_name').say_my_name
+# ===============================================
+# Unit test 3-say_my_name
+# ===============================================
 
-Correct Usage:
->>> say_my_name("John", "Smith")
-My name is John Smith
 
->>> say_my_name("Walter", "White")
-My name is Walter White
+import module:
+       >>> say_my_name = __import__("3-say_my_name").say_my_name
 
->>> say_my_name("Samuel", "Trujillo")
-My name is Samuel Trujillo
+Only one argument:
+       >>> say_my_name("Bond")
+       My name is Bond 
 
->>> say_my_name("hello", "World")
-My name is hello World
+Random name:
+       >>> say_my_name("James", "Bond")
+       My name is James Bond
 
->>> say_my_name("aaa", "bbb")
-My name is aaa bbb
+No arguments:
+       >>> say_my_name()
+       Traceback (most recent call last):
+       TypeError: say_my_name() missing 1 required positional argument: 'first_name'
 
->>> say_my_name("python", "cool")
-My name is python cool
+Pass different argument (not string):
+       >>> say_my_name("Clone", 7)
+       Traceback (most recent call last):
+       TypeError: last_name must be a string
 
-On Errors:
-
->>> say_my_name(2, 2)
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
-
->>> say_my_name("como", 2)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
-
->>> say_my_name("ir", 2)
-Traceback (most recent call last):
-...
-TypeError: last_name must be a string
-
->>> say_my_name(3, "new")
-Traceback (most recent call last):
-...
-TypeError: first_name must be a string
+No strings:
+       >>> say_my_name(77, 7)
+       Traceback (most recent call last):
+       TypeError: first_name must be a string
