@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" 
-script 
-"""
+"""script"""
 
 
 if __name__ == "__main__":
